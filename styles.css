@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+header .logo {
+    height: 40px;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #ff6600;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.filter-sort {
+    display: flex;
+    padding: 10px 0;
+    overflow-x: auto;
+}
+
+.filter-sort button {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+    flex-shrink: 0;
+}
+
+.filter-sort button:hover {
+    background-color: #ffefcc;
+}
+
+.restaurants {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.restaurant-card {
+    background-color: white;
+    width: calc(33.333% - 20px);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.restaurant-card img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.restaurant-card h3 {
+    margin: 10px 0 5px;
+}
+
+.restaurant-card p {
+    margin: 5px 0;
+}
+
+@media (max-width: 700px) {
+    .restaurant-card {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-sort {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .restaurant-card {
+        width: 50%;
+    }
+}
+/* New CSS for floating menu */
+.floating-menu {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.floating-btn {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Ensure it is above other elements */
+}
+
+.floating-menu-options {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 0px; /* Adjusted to ensure it's above the button */
+    right: 70px; /* Align to the right of the floating button */
+    background-color: rgb(219, 143, 116);
+    border: 1px solid #d88965;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 120px;
+    z-index: 5; /* Ensure it's below the floating button */
+}
+
+.floating-menu-options button {
+    background-color: #fd812e;;
+    border: none; /* Remove border */
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0; /* Remove margin between buttons */
+    text-align: left; /* Align text to the left */
+    width: 100%; /* Full width of the menu options */
+}
+
+.floating-menu-options button:hover {
+    background-color: #ffefcc;
+}

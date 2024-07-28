@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="restaurant-logo.png" alt="Restaurant Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#">Search</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Sign In</a></li>
+                    <li><a href="#">Cart</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="filter-sort">
+            <button onclick="filterRestaurants('all')">All</button>
+            <button onclick="filterRestaurants('veg')">Veg</button>
+            <button onclick="filterRestaurants('non-veg')">Non Veg</button>
+        </div>
+        <div class="restaurants">
+            <div class="restaurant-card" data-category="veg">
+                <img src="chinese-wok.jpg" alt="Chinese Wok">
+                <h3>Chinese Wok</h3>
+                <p style="color: green;">Rs.299</p>
+                <p>Enjoy a variety of delicious Chinese dishes</p>
+            </div>
+            <div class="restaurant-card" data-category="non-veg">
+                <img src="pizza.jpg" alt="La Pino'z Pizza">
+                <h3>Pizza</h3>
+                <p style="color: green;">Rs.399</p>
+                <p>Savor tasty and cheesy pizza</p>
+            </div>
+            <div class="restaurant-card" data-category="veg">
+                <img src="Puttu.jpg" alt="The Belgian Waffle Co.">
+                <h3>Puttu</h3>
+                <p style="color: green;">Rs.149</p>
+                <p>Relish the flavorful and filling Puttu</p>
+            </div>
+            <div class="restaurant-card" data-category="non-veg">
+                <img src="chicken pizza.jpg" alt="UBQ by Barbeque Nation">
+                <h3>Chicken Pizza</h3>
+                <p style="color: green;">Rs.599</p>
+                <p>Indulge in a rich and savory chicken pizza</p>
+            </div>
+            <div class="restaurant-card" data-category="non-veg">
+                <img src="Chicken Wings.jpg" alt="Meghana Foods">
+                <h3>Chicken Wings</h3>
+                <p style="color: green;">Rs.259</p>
+                <p>Delight in spicy and crispy chicken wings</p>
+            </div>
+            <div class="restaurant-card" data-category="veg">
+                <img src="khichdi.jpg" alt="Great Indian Khichdi by EatFit">
+                <h3>Khichdi</h3>
+                <p style="color: green;">Rs.149</p>
+                <p>Experience a hearty and comforting Khichdi</p>
+            </div>
+            <div class="restaurant-card" data-category="veg">
+                <img src="South Indian Meals.jpg" alt="Andhra Gunpowder">
+                <h3>South Indian Meals</h3>
+                <p style="color: green;">Rs.499</p>
+                <p>Feast on a complete and satisfying South Indian meal</p>
+            </div>
+            <div class="restaurant-card" data-category="non-veg">
+                <img src="kfc.jpg" alt="KFC">
+                <h3>KFC</h3>
+                <p style="color: green;">Rs.199</p>
+                <p>Enjoy crispy and flavorful KFC offerings</p>
+            </div>
+        </div>
+    </div>
+    <div class="floating-menu">
+        <button class="floating-btn" onclick="toggleMenu()">☰</button>
+        <div class="floating-menu-options" id="floating-menu-options">
+            <button onclick="filterRestaurants('all')">All</button>
+            <button onclick="filterRestaurants('veg')">Veg</button>
+            <button onclick="filterRestaurants('non-veg')">Non Veg</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
